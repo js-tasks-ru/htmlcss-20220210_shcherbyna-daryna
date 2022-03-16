@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DZ-2 Basic page composition</title>
+</head>
+<style>
+  body{
+    background-color: burlywood;
+    font-family: Arial;
+    font-size: 16px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  header{
+    background-color: yellow;
+    text-align: center;
+    color: mediumblue;
+  }
+  nav {
+    background-color: blue;
+  }
+  nav ul li {
+    display: inline-block;
+    padding: 10px;
+  }
+  a{
+    color: yellow;
+  }
+  main{
+    margin: 5px 10px;
+  }
+  article{
+    background-color: darksalmon;
+    color: saddlebrown;
+    margin-top: 5px;
+    padding: 5px 0 5px 15px;
+  }
+  footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: lightgreen;
+    text-align: center;
+    color: saddlebrown;
+    font-size: 30px;
+    font-weight: bold;
+  }
+</style>
+<body>
+  <header>
+    <h1>Header</h1>
+    <nav>
+      <ul>
+        <li><a href="">Navigation 1</a></li>
+        <li><a href="">Navigation 2</a></li>
+        <li><a href="">Navigation 3</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2>Article 1</h2>
+      <ul>
+        <li>Оригинальная трилогия</li>
+        <li>Трилогия приквелов</li>
+        <li>Трилогия сиквелов</li>
+      </ul>
+    </article>
+    <article>
+      <h2>Article 2</h2>
+      <ol>
+        <li>Эпизод IV — Новая надежда</li>
+        <li>Эпизод V — Империя наносит ответный удар</li>
+        <li>Эпизод VI — Возвращение джедая</li>
+      </ol>
+    </article>
+  </main>
+  <footer>
+    <p>
+      Footer
+    </p>
+  </footer>
+</body>
+</html>
