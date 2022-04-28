@@ -5,7 +5,149 @@
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./button.css">
     </head>
-    <body>
+    <style>
+        :root {
+            /*Button colors*/
+            --primary-button-default: #4263EB;
+            --primary-button-hover: #2342C0;
+            --secondary-button-default: #7048E8;
+            --secondary-button-hover: #5028C6;
+            --alternate-button-default: #ACB5BD;
+            --alternate-button-hover: #212429;
+            --alternate-button-disabled: #ACB5BD;
+            /*Buttons colors*/
+            /*Text colors*/
+            --primary-text-default: #212429;
+            --primary-text-dull: #ACB5BD;
+            --alternate-button-text-color: #495057;
+            /*Text colors*/
+            /*Background colors*/
+            --primary-background-default: #ffffff;
+            /*Background colors*/
+        }
 
+        /*Basic styles*/
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Inter';
+        }
+
+        main {
+            margin-top: 50px;
+        }
+
+        article {
+            width: 49%;
+            display: inline-block;
+        }
+
+        p {
+            display: inline-block;
+            width: 200px;
+        }
+
+        button {
+            width: 190px;
+            height: 50px;
+            border: none;
+            border-radius: 8px;
+            transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+            cursor: pointer;
+            color: white;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+
+            /* identical to box height */
+            text-align: center;
+        }
+
+        button:disabled {
+            cursor: default;
+        }
+
+        /*Button styles*/
+        button.prymary {
+            background-color: var(--primary-button-default);
+        }
+
+        button.prymary.active:hover {
+            background-color: var(--primary-button-hover);
+        }
+
+        button.prymary:disabled {
+            opacity: 0.5;
+        }
+
+        button.secondary {
+            background-color: var(--secondary-button-default);
+        }
+
+        button.secondary.active:hover {
+            background-color: var(--secondary-button-hover);
+        }
+
+        button.secondary:disabled {
+            opacity: 0.5;
+        }
+
+        button.alternate {
+            background: none;
+            border: 1px solid var(--alternate-button-default);
+            color: var(--alternate-button-text-color);
+        }
+
+        button.alternate.active:hover {
+            border: 1px solid var(--alternate-button-hover);
+        }
+
+        button.alternate:disabled {
+            opacity: 0.5;
+        }
+        /*Button styles end*/
+        h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 38px;
+            line-height: 46px;
+            text-align: center;
+        }
+        p.text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height, or 150% */
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--primary-text-dull);
+            width: 150px;
+        }
+    </style>
+    <body>
+        <main>
+            <article>
+                <h1>Buttons</h1>
+            </article>
+            <article>
+                <div>
+                    <p class="text">Default</p>
+                    <p><button type="button" class="prymary active">Primary</button></p>
+                    <p><button type="button" class="secondary active">Secondary</button></p>
+                    <p><button type="button" class="alternate active">Alternate</button></p>
+                </div>
+                <div>
+                    <p class="text">Disabled</p>
+                    <p><button type="button" disabled class="prymary">Primary</button></p>
+                    <p><button type="button" disabled class="secondary">Secondary</button></p>
+                    <p><button type="button" disabled class="alternate">Alternate</button></p>
+                </div>
+            </article>
+        </main>
     </body>
 </html>
